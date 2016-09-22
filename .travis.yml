@@ -6,3 +6,10 @@ addons:
 before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 - cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: qoyp2Ql8wO9cPJSm5uLalreYK3Vn0XwGdqOqmgbGO0KX91EojPCMGKqTw3ofZQR6V/+pekuEQcHbgJbVadAE12gZuG9q9U6S9K2LLqo4IcFlOBB9k5xc+AbMnxQcCbwMe6cDdGl0p57w8KQnlWoqKU7Q8I7Ak5STF45v3qAGpnTvhhlV1fWxCUPNSW//lWrNBhn9dvqAw74Zc2FcPPf+D6PTP0HQzeTMeM6JGc1tfLmdYTp9JooYtX9Bi0NNw1bPyIjZkHwWggP3PWfW7oVItJVXLGPFqCvnXba+V+N6pHyLyjGh2WSsJ5qYo6DLuOFXyST7nBuVEie8+W9Vc59WNa9Xs2EbG9Vq3HLcxyuFT1Hgl9cD6+rUIiSRFDfnr1W3JL0FK3kV3S2hgZx91SzXmzVrOtLbQWf9YdHE9CJAXvpwa7dA26k/N+EDqAau4HuiBMwlj3dSQacZmLgOrtKMXpICKs3v34Fz62czEBBKcLRtrcQAFVKQhnQH+KCPGrKZulC1HgKDrhLs+mRPjZOV3H0hni9p+5lvrE28LfZyQHN9eSbscxXQSUySpdXhFxWwE0aL1M/eIt7aFTFPtR/8oYFrtZpI9QCzLciw2sl+qrpSZmiZqFbJ87MAHOnDP0lrZz6nmhvSMGl9tQokPvjdjf3/JhrShyRUnXfqw+286Kw=
+  app: mysterious-dusk-55662
+  on:
+    repo: gittkrd/rails_enpit
